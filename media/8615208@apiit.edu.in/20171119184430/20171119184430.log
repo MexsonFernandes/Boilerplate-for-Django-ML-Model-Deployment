@@ -1,0 +1,108 @@
+
+
+Filename : regressionDataSet.csv
+Email id :8615208@apiit.edu.in
+ID : 20171119184430
+START
+elapsed 
+  0.066 
+
+Step 1: Library Inclusion/home/robomex/R/x86_64-pc-linux-gnu-library/3.4 /usr/local/lib/R/site-library /usr/lib/R/site-library /usr/lib/R/library
+Step 2: Variable Declaration[1] "neuralNetwork"
+[1] "regressionDataSet.csv"
+
+Step 3: Data Loading       RMSD     Area       ED   Energy SS ResidueLength PairNumber X100.6079961
+3090  2.831  4365.83  1934.94 -1074.23  5            63        166            1
+7621  0.000 10312.70 41455.00 -5077.00 67           204       1991            1
+8694  3.725  4955.44  3712.59 -2340.00 11            79        292            1
+12183 0.000  7514.16  9161.00 -4187.00 42           160        582            1
+8506  4.827  7645.16  6796.80 -2060.00 12           119        395            1
+2995  2.255  6605.78 13351.10 -1586.05 18            96        804            1
+      X81.98734877 X0.042989621 X99.92630351
+3090             0            0            1
+7621             1            0            1
+8694             0            0            1
+12183            1            0            1
+8506             0            0            1
+2995             1            0            1
+[1] 16382
+ [1] "RMSD"          "Area"          "ED"            "Energy"       
+ [5] "SS"            "ResidueLength" "PairNumber"    "X100.6079961" 
+ [9] "X81.98734877"  "X0.042989621"  "X99.92630351" 
+
+Step 4: Counting dataset[1] 16382
+
+Step 5: Choose Target Variable[1] "RMSD"
+
+Step 6: Choose Inputs Variable [1] "Area"          "ED"            "Energy"        "SS"           
+ [5] "ResidueLength" "PairNumber"    "X100.6079961"  "X81.98734877" 
+ [9] "X0.042989621"  "X99.92630351" 
+[1] 10
+
+Step 7: Select training dataset          Area       ED   Energy SS ResidueLength PairNumber X100.6079961
+3090   4365.83  1934.94 -1074.23  5            63        166            1
+7621  10312.70 41455.00 -5077.00 67           204       1991            1
+8694   4955.44  3712.59 -2340.00 11            79        292            1
+12183  7514.16  9161.00 -4187.00 42           160        582            1
+8506   7645.16  6796.80 -2060.00 12           119        395            1
+2995   6605.78 13351.10 -1586.05 18            96        804            1
+      X81.98734877 X0.042989621 X99.92630351  RMSD
+3090             0            0            1 2.831
+7621             1            0            1 0.000
+8694             0            0            1 3.725
+12183            1            0            1 0.000
+8506             0            0            1 4.827
+2995             1            0            1 2.255
+[1] 8191
+
+Step 8: Select testing dataset          Area       ED   Energy SS ResidueLength PairNumber X100.6079961
+15573  8220.02  15102.0 -2932.00 20           122        810            1
+5255  20757.10 159488.0 -9040.00 88           449       5537            1
+14695 15031.90  93973.5 -3790.00 51           254       3885            1
+12097  9541.81  53366.9 -3630.00 28           188       2599            1
+10471  7956.87  12356.9 -3045.89 82           136        619            1
+14423  8537.14  12327.1 -2528.70 83           128        693            1
+      X81.98734877 X0.042989621 X99.92630351  RMSD
+15573            1            0            1 0.000
+5255             1            0            1 1.888
+14695            1            0            1 3.094
+12097            1            0            1 4.215
+10471            1            0            1 3.246
+14423            1            0            1 3.921
+[1] 8192
+
+Step 9: Model Building ->  neuralNetworkRMSD ~ Area + ED + Energy + SS + ResidueLength + PairNumber + 
+    X100.6079961 + X81.98734877 + X0.042989621 + X99.92630351
+a 10-10-1 network with 131 weights
+inputs: Area ED Energy SS ResidueLength PairNumber X100.6079961 X81.98734877 X0.042989621 X99.92630351 
+output(s): RMSD 
+options were - skip-layer connections  linear output units 
+
+Step 10: Prediction using ->  neuralNetwork          [,1]
+15573 2.739051
+5255  1.768588
+14695 2.938631
+12097 2.477706
+10471 2.365965
+14423 2.615550
+
+Step 11: Extracting Actual[1] 0.000 1.888 3.094 4.215 3.246 3.921
+
+Step 12: Model Evaluation     [,1]
+[1,] 0.01
+     [,1]
+[1,]    0
+[1] 6.61
+[1] 37.04
+elapsed 
+  0.598 
+null device 
+          1 
+            modelName    r R rmse accuracy totalTime
+elapsed neuralNetwork 0.01 0 6.61    37.04     0.598
+
+Step 13: Writing to file
+Step 14: Saving the Model -> neuralNetwork
+Done
+Total Time Taken:  0.598  sec
+SUCCESSFULLY COMPLETED OPERATION
