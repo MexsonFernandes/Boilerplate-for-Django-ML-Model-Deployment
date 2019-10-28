@@ -1,4 +1,8 @@
-# Regression Model Building - Django 
+# Boilerplate for Django Machine Learning Model Deployment
+
+## Technology stack:
+* Django (Python web framework)
+* R
 
 # how to use:
   - Add your username and password in https://github.com/MexsonFernandes/RegressionModelBuilding-Django/blob/master/ModelBuilding/settings.py
