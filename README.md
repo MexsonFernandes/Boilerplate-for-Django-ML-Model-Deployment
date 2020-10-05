@@ -13,10 +13,7 @@
     
       `install.packages('nnet')`
 
-  - Add your username and password in https://github.com/MexsonFernandes/RegressionModelBuilding-Django/blob/master/ModelBuilding/settings.py
-    - EMAIL_HOST_USER = '<user_name>@gmail.com'
-    - EMAIL_HOST_PASSWORD = 'abcd123'
-  - Make sure that you are able to execute 'Rscript' command from terminal or command prompt.
+  - Make sure that you are able to execute `Rscript` command from terminal or command prompt.
 
 
 
@@ -27,6 +24,11 @@
   * Install dependencies.
 
     `pip install -r requirements.txt`
+
+  * Start dummy email server or add your config in settings file.
+
+    `python -m smtpd -n -DebuggingServer localhost:1025`
+
   * Start Django server.
 
     `python manage.py runserver`
